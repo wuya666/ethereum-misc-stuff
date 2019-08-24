@@ -1,0 +1,27 @@
+{
+  "name": "getpoablockminerjs",
+  "version": "1.0.0",
+  "description": "Get a Block's Miner on an Ethereum POA network with JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wuya666/ethereum-misc-stuff/nodejs/getPoABlockMiner"
+  },
+  "keywords": [
+    "nodejs",
+    "ethereum",
+    "poa",
+    "block",
+    "miner"
+  ],
+  "author": "wuya666",
+  "license": "MIT",
+  "dependencies": {
+    "ethereumjs-util": "^6.1.0",
+    "web3": "^1.2.1"
+  }
+}
