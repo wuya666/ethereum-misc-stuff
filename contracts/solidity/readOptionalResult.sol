@@ -34,5 +34,15 @@ contract Tester {
         _result = abi.decode(_addr.readOrNull(abi.encode(sig)), (uint256));
         lastUintResult = _result;
     }
-
+    
+    function readNameUnsafe() public view returns (string memory _result) {
+        bytes4 sig = bytes4(keccak256(abi.encodePacked("name()")));
+        _result = abi.decode(address(this).readOrNull(abi.encode(sig)), (string));
+    }
+    
+    function readNameSafe() public returns (string memory _result) {
+        bytes4 sig = bytes4(keccak256(abi.encodePacked("readNameUnsafe()")));
+        _result = abi.decode(address(this).readOrNull(abi.encode(sig)), (string));
+        lastStringResult = _result;
+    }
 }
